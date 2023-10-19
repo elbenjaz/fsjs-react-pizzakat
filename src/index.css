@@ -1,0 +1,51 @@
+@import url('https://fonts.cdnfonts.com/css/vic');
+@import url('https://fonts.cdnfonts.com/css/reenie-beanie');
+
+body {
+    position: relative;
+    font-family: 'VIC', sans-serif;
+    background-image: url("/bg.jpg");
+}
+
+button:not(.btn-close, .Toastify__close-button), input, select, a.btn {
+    border: 2px #000 solid !important;
+}
+
+.dialog {
+    position: relative;
+    background-color: var(--header-bgcolor);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--header-color);
+    max-width: 300px;
+}
+.dialog:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+}
+.dialog b {
+    color: var(--active);
+}
+.dialog.dialog-left:before {
+    right: -20px;
+    border-color: transparent transparent transparent var(--header-bgcolor);
+}
+.dialog.dialog-right:before {
+    left: -20px;
+    border-color: transparent var(--header-bgcolor) transparent transparent;
+}
+
+.feedback img {
+    width: 100px;
+    border-radius: 100%;
+}
+
+.handwritten {
+    font-family: 'Reenie Beanie', sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+}

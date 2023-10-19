@@ -1,0 +1,172 @@
+:root {
+    --active: #ffcc00;
+    --inactive: #fff;
+
+    --header-bgcolor: #000;
+    --header-color: #fff;
+
+    --brown1: #BF794E;
+    --green1: #68AE28;
+    --green2: #006359;
+    --red1: #EF8200;
+    --red2: #E50020;
+    --yellow1: #FFE100;
+    --yellow2: #F9BE00;    
+}
+
+/* Menu */
+.Menu {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: var(--header-bgcolor);
+    border: 2px #000 solid;
+    color: var(--header-color);
+    font-size: 20px;
+}
+.Menu a {
+    color: var(--inactive);
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px var(--inactive) solid;
+    padding: 20px;
+    border-radius: 20px;
+    
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;    
+}
+.Menu a:first-child {
+    border: 0;
+}
+.Menu a.active {
+    color: var(--active);
+    border-color: var(--active);
+}
+.Menu a img {
+    width: 120px;
+}
+
+
+/* Pizzas */
+.Pizzas .pizza-card {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border: 2px #000 solid;
+    margin: 10px;
+    width: 320px;
+    background-size: 100% 200%;
+}
+.Pizzas .pizza-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 2px var(--brown1) solid;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* pizza card */
+.pizza-card {
+    background: radial-gradient(circle, white 0%, white 50%, var(--yellow1) 50%, var(--yellow2) 100%) 0% 0% / 100% 200%;
+}
+.pizza-card:nth-child(3n) {
+    background: radial-gradient(circle, white 0%, white 50%, var(--red1) 50%, var(--red2) 100%) 0% 0% / 100% 200%;
+}
+.pizza-card:nth-child(3n+1) {
+    background: radial-gradient(circle, white 0%, white 50%, var(--green1) 50%, var(--green2) 100%) 0% 0% / 100% 200%;
+}
+
+/* ingredients : vegetables */
+.pizza-card-ingredient[data-type="oregano"],
+.pizza-card-ingredient[data-type="olives"],
+.pizza-card-ingredient[data-type="mushrooms"],
+.pizza-card-ingredient[data-type="tomatoes"],
+.pizza-card-ingredient[data-type="cherry tomatoes"],
+.pizza-card-ingredient[data-type="bell peppers"] {
+    background-color: var(--green2) !important;
+}
+/* ingredients : meat */
+.pizza-card-ingredient[data-type="bacon"],
+.pizza-card-ingredient[data-type="ham"],
+.pizza-card-ingredient[data-type="chorizo sausage"],
+.pizza-card-ingredient[data-type="salami"],
+.pizza-card-ingredient[data-type="grilled chicken"] {
+    background-color: var(--red2) !important;
+}
+/* ingredients : dairy */
+.pizza-card-ingredient[data-type="mozzarella"] {
+    background-color: var(--yellow2) !important;
+}
+
+/* Pizza */
+.Pizza {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border: 2px #000 solid;    
+    margin: 20px;
+}
+.Pizza img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 2px var(--brown1) solid;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* PizzaContext */
+.PizzaContext {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border: 2px #000 solid;    
+    margin: 20px;
+}
+.PizzaContext .pizza-loading img {
+    width: 100px;
+    animation: spin 1.5s linear infinite;
+}
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+/* Cart */
+.Cart {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border: 2px #000 solid;    
+    margin: 20px;
+}
+.Cart .cart-item {
+    border: 2px #000 solid;
+    border-bottom: 0;    
+}
+.Cart .cart-item:last-child {
+    border: 2px #000 solid;
+}
+.Cart .cart-item a {
+    text-decoration: none;
+    color: #000;
+}
+.Cart .cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px var(--brown1) solid;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+.Cart .cart-item:nth-child(odd) {
+    background: #f2f2f2
+}
+.Cart .cart-item:nth-child(even) {
+    background: #fff;
+}
+.Cart .cart-item-quantity {
+    width: 25px;
+}
