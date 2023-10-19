@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useContext, useEffect } from "react";
-import { Badge } from 'react-bootstrap';
+import { Badge, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import Error404 from "./Error404";
 
@@ -35,7 +35,10 @@ const Pizza = () => {
 
                     <div className="my-4">
                         {pizza.ingredients.sort().map((ingredient) => (
-                            <span key={ingredient} className="pizza-card-ingredient badge text-bg-secondary mx-1" data-type={ingredient}>{ingredient}</span>
+                            <span key={ingredient} className="pizza-card-ingredient badge text-bg-secondary mx-1" 
+                                data-type={ingredient}>
+                                {ingredient}
+                            </span>
                         ))}
                     </div>
 
@@ -43,11 +46,11 @@ const Pizza = () => {
                         <small>{pizza.desc}</small>
                     </div>
                     
-                    <button className="btn btn-success mt-1" onClick={() => addToCart(pizza)}>
+                    <Button variant="success" className="mt-1" onClick={() => addToCart(pizza)}>
                         <FontAwesomeIcon icon={faPlus} />
                         <FontAwesomeIcon icon={faCartShopping} />
                         Add to cart
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>

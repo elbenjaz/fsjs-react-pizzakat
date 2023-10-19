@@ -101,10 +101,9 @@ const Cart = () => {
                         <span>
                             Total: <b>{formatPrice(cart.total_price)}</b>
                             <br/>
-                            <button className="btn btn-success mt-2" onClick={()=> {submitOrder()}}>
+                            <Button variant="success" className="mt-2" onClick={()=> {submitOrder()}}>
                                 Confirm your order
-                            </button>                                
-
+                            </Button>
                         </span>
                     </div>
                     <img className="ms-4" src="../dialog2.gif" />
@@ -115,4 +114,3 @@ const Cart = () => {
 };
 
 export default Cart;
-

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from "react";
 import Badge from 'react-bootstrap/Badge';
 import { NavLink } from "react-router-dom";
@@ -11,14 +11,14 @@ const Menu = () => {
     const setActiveClass = ({ isActive }) => (isActive ? "active" : undefined);
 
     return (
-        <nav className="Menu d-flex flex-wrap justify-content-center justify-content-md-start align-items-center pb-4 pb-md-0">
+        <nav className="Menu d-flex flex-wrap justify-content-center justify-content-md-start align-items-center">
             <NavLink to="/">
                 <img src="/pizzakat.png" />
             </NavLink>
 
             <NavLink className={setActiveClass} to="/">
                 <div><FontAwesomeIcon icon={faPizzaSlice} /></div>
-                <span>Pizzas</span>
+                <span className="d-none d-md-block">Pizzas</span>
             </NavLink>
 
             <NavLink className={setActiveClass} to="/cart">
@@ -36,7 +36,7 @@ const Menu = () => {
                     </Badge> : null }
                 </div>
 
-                <span>Cart</span>
+                <span className="d-none d-md-block">Cart</span>
             </NavLink>
         </nav>
     );

@@ -65,10 +65,12 @@ const PizzaProvider = ({ children }) => {
             feedback(`Removed from cart: ${pizza.name}`, "error");
         },
 
+        /*
         updateCartTotal = (newCart) => {
             newCart.total_price = newCart.items.reduce((acc, item) => acc + item.price * item.quantity, 0);
             newCart.total_items = newCart.items.reduce((acc, item) => acc + item.quantity, 0);
         },
+        */
     
         emptyCart = () => {
             setCart(defaultCart);
