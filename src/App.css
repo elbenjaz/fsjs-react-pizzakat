@@ -149,7 +149,12 @@
     background-color: #fff;
     padding: 40px;
     border: 2px #000 solid;    
-    margin: 20px;
+    margin: 20px 0;
+}
+@media (min-width: 576px) {
+    .Cart {
+        margin: 20px;
+    }
 }
 .Cart .cart-item {
     border: 2px #000 solid;
